@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SwiftCourier Support & Helpdesk</title>
+  <meta name="description" content="Get in touch with SwiftCourier. 24/7 customer support, claims department, enterprise sales, hub location directory, and pickup scheduling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="navbar">
+      <a href="index.html" class="logo-brand">
+        <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="fas fa-user-lock"></i> Account Login</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div>
+      <div class="logo-brand" style="margin-bottom: 2rem;">
+        <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+      </div>
+      <ul style="display: flex; flex-direction: column; gap: 1rem;">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-user-lock"></i> Account Login</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: CONTACT HERO & EMERGENCY BAR -->
+    <section class="page-hero">
+      <div class="section-wrapper" style="padding-top: 0; padding-bottom: 0;">
+        <span class="section-tag"><i class="fas fa-headset"></i> 24/7 Global Support</span>
+        <h1 class="section-title">We are Here to <span>Help You</span></h1>
+        <p class="section-desc" style="margin: 0 auto 1.5rem;">
+          Have questions about your shipment, express rates, or API integration? Connect with our dedicated support agents anytime.
+        </p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> <span>Contact</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE CONTACT FORM -->
+    <section class="section-wrapper">
+      <div class="grid-2" style="align-items: flex-start;">
+        <div>
+          <span class="section-tag"><i class="fas fa-paper-plane"></i> Send Message</span>
+          <h2 class="section-title">Get in Touch <span>With Us</span></h2>
+          <p class="section-desc">Fill out the inquiry form and our team will respond within 15 minutes.</p>
+
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4 style="color: #fff; font-size: 1rem;">24/7 Hotline Call Center</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">+1 (800) 555-SWIFT (79438)</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--accent-light); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 style="color: #fff; font-size: 1rem;">Official Email Desk</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">support@swiftcourier.com</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <img src="assets/contact_support.webp" alt="24/7 Global Dispatch & Support Center" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-glass);">
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 2.5rem;">
+          <form onsubmit="event.preventDefault(); window.location.href='404.html';">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-input" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Inquiry Topic</label>
+              <select class="form-select">
+                <option>Tracking & Package Status Help</option>
+                <option>Commercial Enterprise Quote</option>
+                <option>Claims & Damage Report</option>
+                <option>API & Developer Support</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message Details</label>
+              <textarea class="form-textarea" rows="4" placeholder="Describe your inquiry..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: GLOBAL OFFICE DIRECTORY -->
+    <section class="section-wrapper" style="background: rgba(255,255,255,0.01);">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-map-marked-alt"></i> Headquarters</span>
+        <h2 class="section-title">Regional Office <span>Locations</span></h2>
+        <p class="section-desc">Visit or call our regional hub offices worldwide.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <img src="assets/office_ny.webp" alt="Americas HQ New York" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+          <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;"><i class="fas fa-city" style="color: var(--primary);"></i> Americas HQ (New York)</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">100 Logistics Way, New York, NY 10001</p>
+          <p style="color: var(--primary); font-weight: 700; font-size: 0.85rem;">+1 (212) 555-0199</p>
+        </div>
+
+        <div class="glass-card">
+          <img src="assets/office_london.webp" alt="EMEA HQ London" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+          <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;"><i class="fas fa-city" style="color: var(--accent);"></i> EMEA HQ (London)</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">45 Westminster Freight Center, London UK</p>
+          <p style="color: var(--accent); font-weight: 700; font-size: 0.85rem;">+44 20 7946 0912</p>
+        </div>
+
+        <div class="glass-card">
+          <img src="assets/office_singapore.webp" alt="APAC HQ Singapore" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+          <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;"><i class="fas fa-city" style="color: #34d399;"></i> APAC HQ (Singapore)</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">10 Changi Air Cargo Road, Singapore</p>
+          <p style="color: #34d399; font-weight: 700; font-size: 0.85rem;">+65 6789 0123</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: INTERACTIVE HUB LOCATOR MAP -->
+    <section class="section-wrapper">
+      <div class="glass-panel" style="padding: 2.5rem; text-center;">
+        <span class="section-tag"><i class="fas fa-crosshairs"></i> Find Drop-Off Hub</span>
+        <h2 class="section-title">Drop-Off Location <span>Finder</span></h2>
+        <p class="section-desc">Locate the nearest 24/7 SwiftCourier drop-off locker or station.</p>
+        
+        <div style="background: rgba(0,0,0,0.4); border: 1px solid var(--border-glass); border-radius: 12px; padding: 2rem; max-width: 700px; margin: 0 auto;">
+          <img src="assets/tracking_map.webp" alt="Global Drop-Off Station Finder" style="width: 100%; border-radius: 10px; margin-bottom: 1.25rem; border: 1px solid var(--border-glass);">
+          <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <input type="text" class="form-input" placeholder="Enter City or ZIP Code (e.g. 10001)...">
+            <button class="btn btn-primary"><i class="fas fa-search"></i> Search</button>
+          </div>
+          <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 8px; border: 1px dashed var(--border-glass);">
+            <p style="color: #34d399; font-weight: 700;"><i class="fas fa-check-circle"></i> Nearest Station: Manhattan JFK Hub #01 (Open 24/7)</p>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">Distance: 1.2 miles away • Automated self-service parcel locker available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SUPPORT TICKET LOOKUP TOOL -->
+    <section class="section-wrapper">
+      <div class="grid-2" style="align-items: center;">
+        <div>
+          <span class="section-tag"><i class="fas fa-ticket-alt"></i> Existing Ticket</span>
+          <h2 class="section-title">Check Ticket <span>Resolution Status</span></h2>
+          <p class="section-desc">Already submitted a support request? Track ticket updates live.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2rem;">
+          <form onsubmit="event.preventDefault(); window.location.href='404.html';">
+            <div class="form-group">
+              <label class="form-label">Support Ticket ID</label>
+              <input type="text" class="form-input" placeholder="e.g. TCK-8812" required>
+            </div>
+            <button type="submit" class="btn btn-accent" style="width: 100%;"><i class="fas fa-search"></i> Lookup Ticket</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: LIVE CHAT TRIGGER BOX -->
+    <section class="section-wrapper" style="background: rgba(255,255,255,0.01);">
+      <div class="glass-card text-center" style="padding: 3rem; background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);">
+        <i class="fas fa-robot" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
+        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">Need Instant AI Assistance?</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Our automated AI assistant can answer shipping policy questions in under 5 seconds.</p>
+        <button class="btn btn-accent btn-md" onclick="window.location.href='404.html'"><i class="fas fa-comments"></i> Start Live Chat</button>
+      </div>
+    </section>
+
+    <!-- SECTION 7: SCHEDULE PICKUP / MEETING CONSULTATION -->
+    <section class="section-wrapper">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-calendar-alt"></i> Book Pickup</span>
+        <h2 class="section-title">Schedule an On-Site <span>Courier Pickup</span></h2>
+        <p class="section-desc">Select a convenient date and time slot for a courier to collect packages at your door.</p>
+      </div>
+
+      <div class="glass-card" style="max-width: 650px; margin: 0 auto; padding: 2.5rem;">
+        <form onsubmit="event.preventDefault(); window.location.href='404.html';">
+          <div class="grid-2" style="gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">Pickup Date</label>
+              <input type="date" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Time Window</label>
+              <select class="form-select">
+                <option>Morning (09:00 AM - 12:00 PM)</option>
+                <option>Afternoon (12:00 PM - 04:00 PM)</option>
+                <option>Evening (04:00 PM - 08:00 PM)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pickup Address</label>
+            <input type="text" class="form-input" placeholder="Street address, City, ZIP" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-check-circle"></i> Confirm Pickup Window</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SOCIAL MEDIA & SYSTEM UPTIME INDICATOR -->
+    <section class="section-wrapper">
+      <div class="glass-panel text-center" style="padding: 2.5rem;">
+        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Connect With SwiftCourier Community</h4>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Follow us for real-time weather disruption alerts and service expansions.</p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+          <span class="badge badge-success" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><i class="fas fa-signal"></i> Network Status: 100% Operational</span>
+          <span class="badge badge-info" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><i class="fas fa-clock"></i> Avg Response Time: 4 mins</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo-brand">
+          <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+        </a>
+        <p class="footer-brand-desc">Next-generation global delivery, same-day courier, and air cargo logistics platform powered by AI tracking.</p>
+        <div class="social-icons">
+          <a href="404.html" class="social-icon" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+          <a href="404.html" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services & Rates</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blog.html">Blog Insights</a></li>
+        </ul>
+      </div>
+<div>
+        <h4 class="footer-title">Portals & Validation</h4>
+        <ul class="footer-links">
+          <li><a href="404.html">tracker</a></li>
+          <li><a href="404.html">Client Parcel </a></li>
+          <li><a href="404.html">Admin Fleet Control Tower</a></li>
+          <li><a href="404.html"> Page Demo</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Contact HQ</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> 100 Logistics Way, New York, NY</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-phone" style="color: var(--accent);"></i> +1 (800) 555-SWIFT</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-envelope" style="color: #34d399;"></i> support@swiftcourier.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SwiftCourier Inc. All rights reserved.</p>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">System Status: <span style="color: #34d399;">● 100% Operational</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftCourier | Fast, Smart & Global Courier Delivery Service</title>
+  <meta name="description" content="Next-generation courier, express delivery, and global logistics service powered by real-time tracking, AI route optimization, and instant rate calculators.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="navbar">
+      <a href="index.html" class="logo-brand">
+        <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="fas fa-user-lock"></i> Account Login</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div>
+      <div class="logo-brand" style="margin-bottom: 2rem;">
+        <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+      </div>
+      <ul style="display: flex; flex-direction: column; gap: 1rem;">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-user-lock"></i> Account Login</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="page-hero" style="padding-top: 5rem; padding-bottom: 5rem;">
+      <div class="section-wrapper" style="padding-top: 0; padding-bottom: 0;">
+        <span class="section-tag"><i class="fas fa-bolt"></i> Next-Gen Logistics Platform</span>
+        <h1 class="section-title" style="font-size: 3.2rem; max-width: 900px; margin: 0 auto 1.5rem;">
+          Lightning Fast Doorstep Courier & <span>Global Logistics</span>
+        </h1>
+        <p class="section-desc" style="max-width: 720px; margin: 0 auto 2.5rem;">
+          Deliver packages anywhere in the world with real-time GPS tracking, 2-hour local express pickups, temperature-controlled freight, and automated e-commerce fulfillment.
+        </p>
+        <div class="hero-actions flex-center" style="gap: 1rem; margin-bottom: 3rem;">
+          <a href="404.html" class="btn btn-primary btn-lg"><i class="fas fa-search-location"></i> Track Parcel Live</a>
+          <a href="404.html" class="btn btn-outline btn-lg"><i class="fas fa-calculator"></i> Estimate Rate</a>
+        </div>
+        
+        <div class="grid-4" style="max-width: 1000px; margin: 0 auto;">
+          <div class="glass-card text-center" style="padding: 1.2rem;">
+            <i class="fas fa-clock" style="font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem;"></i>
+            <h4 style="font-size: 1.1rem; color: #fff;">2-Hour Local Express</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Urgent doorstep pickup & delivery</p>
+          </div>
+          <div class="glass-card text-center" style="padding: 1.2rem;">
+            <i class="fas fa-plane-departure" style="font-size: 1.8rem; color: var(--accent); margin-bottom: 0.5rem;"></i>
+            <h4 style="font-size: 1.1rem; color: #fff;">195+ Countries</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Seamless international air freight</p>
+          </div>
+          <div class="glass-card text-center" style="padding: 1.2rem;">
+            <i class="fas fa-shield-alt" style="font-size: 1.8rem; color: #818cf8; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-size: 1.1rem; color: #fff;">100% Insured Cargo</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Guaranteed full-value protection</p>
+          </div>
+          <div class="glass-card text-center" style="padding: 1.2rem;">
+            <i class="fas fa-headset" style="font-size: 1.8rem; color: #34d399; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-size: 1.1rem; color: #fff;">24/7 AI Support</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Live assistance anytime</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <img src="assets/hero_delivery.webp" alt="SwiftCourier Express Delivery Fleet" style="width: 100%; max-width: 900px; border-radius: 16px; border: 1px solid var(--border-glass); box-shadow: var(--shadow-glow);">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: REAL-TIME TRACKING WIDGET -->
+    <section id="trackingSection" class="section-wrapper">
+      <div class="glass-panel" style="padding: 3rem; background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(9, 13, 22, 0.95) 100%);">
+        <div class="text-center">
+          <span class="section-tag"><i class="fas fa-satellite"></i> Live Satellite Tracking</span>
+          <h2 class="section-title">Track Your <span>Package Status</span></h2>
+          <p class="section-desc">Enter your 10-digit tracking code below for instant live status updates.</p>
+        </div>
+
+        <form id="trackingForm" style="max-width: 650px; margin: 0 auto;">
+          <div class="tracking-input-box" style="display: flex; gap: 0.75rem; background: rgba(0,0,0,0.5); padding: 0.5rem; border: 1px solid var(--border-glass); border-radius: var(--radius-sm);">
+            <input type="text" id="trackingInput" class="form-input" placeholder="e.g. TRK-8849-NY" style="border: none; background: transparent; font-size: 1.1rem;" required>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Track Package</button>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-dim); text-align: center; margin-top: 0.75rem;">
+            Demo tracking codes to try: <strong style="color: var(--primary);">TRK-8849-NY</strong> or <strong style="color: var(--accent);">TRK-9921-LA</strong>
+          </p>
+        </form>
+
+        <div id="trackingResultBox"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INSTANT RATE & SHIPPING CALCULATOR -->
+    <section id="calculatorSection" class="section-wrapper">
+      <div class="grid-2" style="align-items: center;">
+        <div>
+          <span class="section-tag"><i class="fas fa-calculator"></i> Transparent Pricing</span>
+          <h2 class="section-title">Instant Shipping <span>Cost Calculator</span></h2>
+          <p class="section-desc">Get an accurate upfront delivery cost quote in seconds without hidden fees or surprise surcharges.</p>
+          <ul style="display: flex; flex-direction: column; gap: 1rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> Dynamic weight and dimensional volume estimation</li>
+            <li style="display: flex; gap: 0.75rem; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> Custom fuel surcharge transparency</li>
+            <li style="display: flex; gap: 0.75rem; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> Instant invoice quote download</li>
+          </ul>
+        </div>
+
+        <div class="glass-card" style="padding: 2.5rem;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: #fff;">Estimate Delivery Cost</h3>
+          <form id="rateCalcForm">
+            <div class="form-group">
+              <label class="form-label">Service Type</label>
+              <select id="calcService" class="form-select">
+                <option value="express">Standard Express Delivery</option>
+                <option value="same-day">Same-Day Local Courier</option>
+                <option value="air-cargo">International Priority Air Freight</option>
+                <option value="cold-chain">Cold-Chain Temperature Controlled</option>
+              </select>
+            </div>
+            <div class="grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label">Weight (kg)</label>
+                <input type="number" id="calcWeight" class="form-input" value="2.5" min="0.1" step="0.1" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Destination Zone</label>
+                <select id="calcDistance" class="form-select">
+                  <option value="domestic">Domestic City-to-City</option>
+                  <option value="regional">Regional Cross-Border</option>
+                  <option value="international">Global International</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;"><i class="fas fa-calculator"></i> Calculate Estimate</button>
+          </form>
+
+          <div id="calcOutput" style="margin-top: 1.5rem;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CORE SERVICES HIGHLIGHTS -->
+    <section class="section-wrapper" style="background: rgba(255,255,255,0.01);">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-boxes"></i> What We Offer</span>
+        <h2 class="section-title">Comprehensive <span>Logistics Solutions</span></h2>
+        <p class="section-desc">Tailored courier and freight services engineered for individuals, SMBs, and global enterprise operations.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <div style="width: 50px; height: 50px; background: var(--primary-light); color: var(--primary); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+            <i class="fas fa-motorcycle"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: #fff;">Same-Day Express Courier</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">Immediate courier dispatch for urgent document drop-offs and lightweight retail parcels within 2 to 4 hours.</p>
+          <a href="404.html" style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="glass-card">
+          <div style="width: 50px; height: 50px; background: var(--accent-light); color: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+            <i class="fas fa-plane"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: #fff;">Global Air Cargo Freight</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">Worldwide priority flight charters and commercial cargo freight with automated customs documentation clearance.</p>
+          <a href="404.html" style="color: var(--accent); font-weight: 700; font-size: 0.9rem;">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="glass-card">
+          <div style="width: 50px; height: 50px; background: rgba(99, 102, 241, 0.15); color: #818cf8; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+            <i class="fas fa-snowflake"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: #fff;">Cold-Chain & Fragile Logistics</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">Temperature-controlled containers monitored by IoT sensors for vaccines, fresh food, and high-tech electronics.</p>
+          <a href="404.html" style="color: #818cf8; font-weight: 700; font-size: 0.9rem;">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="glass-card">
+          <div style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.15); color: #34d399; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+            <i class="fas fa-warehouse"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: #fff;">E-Commerce Warehousing</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">Strategic micro-fulfillment centers offering automated pick, pack, and reverse logistics returns management.</p>
+          <a href="404.html" style="color: #34d399; font-weight: 700; font-size: 0.9rem;">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="glass-card">
+          <div style="width: 50px; height: 50px; background: rgba(245, 158, 11, 0.15); color: var(--primary); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+            <i class="fas fa-door-open"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: #fff;">Door-to-Door Pickup</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">Schedule a courier directly to your home or office address with flexible pick-up time slot scheduling.</p>
+          <a href="404.html" style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="glass-card">
+          <div style="width: 50px; height: 50px; background: rgba(6, 182, 212, 0.15); color: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: #fff;">Developer API Integrations</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">Seamlessly integrate live tracking, rate quotes, and label creation directly into your custom checkout funnel.</p>
+          <a href="404.html" style="color: var(--accent); font-weight: 700; font-size: 0.9rem;">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: HOW IT WORKS (4-STEP PROCESS) -->
+    <section class="section-wrapper">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-list-ol"></i> Step-By-Step Workflow</span>
+        <h2 class="section-title">How Delivery <span>Works</span></h2>
+        <p class="section-desc">Simple 4-step process from booking to doorstep signature confirmation.</p>
+      </div>
+
+      <div class="grid-4" style="position: relative;">
+        <div class="glass-card text-center" style="position: relative;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--primary); color: #090d16; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">1</div>
+          <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Book Order Online</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Fill parcel dimensions & pick destination zone via our portal.</p>
+        </div>
+
+        <div class="glass-card text-center">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: #090d16; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">2</div>
+          <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Doorstep Pickup</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Courier agent collects parcel within 30 minutes of booking confirmation.</p>
+        </div>
+
+        <div class="glass-card text-center">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: #818cf8; color: #090d16; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">3</div>
+          <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Live AI In-Transit</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Real-time GPS tracking and automated SMS/email milestone alerts.</p>
+        </div>
+
+        <div class="glass-card text-center">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: #34d399; color: #090d16; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">4</div>
+          <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">Doorstep Handover</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Safe delivery with digital signature verification & photo proof.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GLOBAL IMPACT STATS COUNTER -->
+    <section class="section-wrapper" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border-y: 1px solid var(--border-glass);">
+      <div class="grid-4 stats-grid text-center">
+        <div class="stat-card-item">
+          <h2 class="counter-val" data-target="12.4" data-float="true" data-suffix="M+" style="color: var(--primary); font-weight: 800;">0</h2>
+          <p style="color: var(--text-muted); font-weight: 600;">Parcels Delivered</p>
+        </div>
+        <div class="stat-card-item">
+          <h2 class="counter-val" data-target="195" data-suffix="+" style="color: var(--accent); font-weight: 800;">0</h2>
+          <p style="color: var(--text-muted); font-weight: 600;">Global Countries Covered</p>
+        </div>
+        <div class="stat-card-item">
+          <h2 class="counter-val" data-target="99.8" data-float="true" data-suffix="%" style="color: #34d399; font-weight: 800;">0</h2>
+          <p style="color: var(--text-muted); font-weight: 600;">On-Time Delivery Rate</p>
+        </div>
+        <div class="stat-card-item">
+          <h2 class="counter-val" data-target="450" data-suffix="+" style="color: #818cf8; font-weight: 800;">0</h2>
+          <p style="color: var(--text-muted); font-weight: 600;">Active Electric Vans & Drones</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: LOGISTICS FLEET SHOWCASE -->
+    <section class="section-wrapper">
+      <div class="grid-2" style="align-items: center;">
+        <div>
+          <span class="section-tag"><i class="fas fa-truck-moving"></i> Fleet Infrastructure</span>
+          <h2 class="section-title">Autonomous Drones & <span>Green Electric Fleet</span></h2>
+          <p class="section-desc">We operate a multi-modal logistics ecosystem powered by AI route optimization, zero-emission cargo vans, heavy transport planes, and electric urban delivery drones.</p>
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="display: flex; gap: 1rem;">
+              <i class="fas fa-robot" style="font-size: 1.5rem; color: var(--accent); margin-top: 4px;"></i>
+              <div>
+                <h4 style="color: #fff; font-size: 1.1rem;">Urban Drone Drop-offs</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Autonomous delivery drones operating in select metro air routes for under 15-minute emergency medical deliveries.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <i class="fas fa-leaf" style="font-size: 1.5rem; color: #34d399; margin-top: 4px;"></i>
+              <div>
+                <h4 style="color: #fff; font-size: 1.1rem;">100% Electric Cargo Vans</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Zero-emission last-mile logistics reducing carbon output across congested city centers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card text-center" style="padding: 2rem;">
+          <img src="assets/fleet_showcase.webp" alt="Smart Automated Sorting Hubs & EV Fleet" style="width: 100%; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid var(--border-glass);">
+          <h3 style="font-size: 1.6rem; color: #fff; margin-bottom: 1rem;">Smart Automated Sorting Hubs</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Robotic conveyor belts scanning and sorting over 85,000 packages per hour with zero human error.</p>
+          <a href="404.html" class="btn btn-outline btn-sm">Explore Our Technology</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: ENTERPRISE E-COMMERCE SOLUTIONS -->
+    <section class="section-wrapper" style="background: rgba(255,255,255,0.01);">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-shopping-cart"></i> E-Commerce Partners</span>
+        <h2 class="section-title">Built for High-Volume <span>E-Commerce Sellers</span></h2>
+        <p class="section-desc">Automate your store shipping workflow with official plugins, discounted commercial rates, and multi-carrier redundancy.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card text-center">
+          <i class="fab fa-shopify" style="font-size: 3rem; color: #96bf48; margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">Shopify 1-Click App</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Sync store orders automatically, print labels in bulk, and push tracking numbers back to buyers instantly.</p>
+        </div>
+        <div class="glass-card text-center">
+          <i class="fab fa-wordpress" style="font-size: 3rem; color: #21759b; margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">WooCommerce Extension</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Real-time shipping calculation rates at checkout with automated address validation and customer SMS updates.</p>
+        </div>
+        <div class="glass-card text-center">
+          <i class="fas fa-cogs" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">Custom REST API</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Robust API endpoints for custom Node, Python, and React applications with high uptime guarantees.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: TESTIMONIALS & SOCIAL PROOF -->
+    <section class="section-wrapper">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-star"></i> Client Testimonials</span>
+        <h2 class="section-title">Loved by Thousands of <span>Businesses</span></h2>
+        <p class="section-desc">See what our business customers and individual clients say about our delivery speed.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <img src="assets/review_glow.webp" alt="Glow Beauty Cosmetics Case Study" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+          <div style="color: var(--primary); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="color: var(--text-main); font-style: italic; margin-bottom: 1.25rem;">"SwiftCourier transformed our e-commerce business! Same-day local delivery boosted our customer satisfaction scores by 35% in New York."</p>
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #090d16; font-weight: 700; display: flex; align-items: center; justify-content: center;">EM</div>
+            <div>
+              <h4 style="font-size: 0.95rem; color: #fff;">Emily Martinez</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Founder, Glow Cosmetics</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <img src="assets/review_biolife.webp" alt="BioLife Pharma Case Study" style="width: 100%; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+          <div style="color: var(--primary); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="color: var(--text-main); font-style: italic; margin-bottom: 1.25rem;">"Their cold-chain logistics service for our medical lab samples has been flawless. Temperature tracking graphs are accessible in real time."</p>
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #090d16; font-weight: 700; display: flex; align-items: center; justify-content: center;">DR</div>
+            <div>
+              <h4 style="font-size: 0.95rem; color: #fff;">Dr. Richard Sterling</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Operations Director, BioLife Labs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div style="color: var(--primary); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="color: var(--text-main); font-style: italic; margin-bottom: 1.25rem;">"The developer API took us less than 2 hours to integrate. The live dispatch portal makes managing hundreds of daily orders effortless."</p>
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: #818cf8; color: #090d16; font-weight: 700; display: flex; align-items: center; justify-content: center;">AS</div>
+            <div>
+              <h4 style="font-size: 0.95rem; color: #fff;">Alex Chen</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">CTO, TechSupply Global</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: SECURITY & GUARANTEE PROMISES -->
+    <section class="section-wrapper" style="background: rgba(255,255,255,0.01);">
+      <div class="glass-panel" style="padding: 3rem;">
+        <div class="grid-3 text-center">
+          <div>
+            <i class="fas fa-user-shield" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+            <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">Tamper-Proof Packaging</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Every parcel sealed with unique cryptographic QR security seals preventing unauthorized access.</p>
+          </div>
+          <div>
+            <i class="fas fa-file-contract" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+            <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">$10,000 Insured Freight</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Comprehensive baseline insurance coverage backed by top global underwriting partners.</p>
+          </div>
+          <div>
+            <i class="fas fa-handshake" style="font-size: 2.5rem; color: #34d399; margin-bottom: 1rem;"></i>
+            <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">Money-Back Guarantee</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">If our express courier fails to meet guaranteed delivery deadlines, your shipping cost is 100% refunded.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: RECENT NEWS & LOGISTICS ARTICLES -->
+    <section class="section-wrapper">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-newspaper"></i> Latest Insights</span>
+        <h2 class="section-title">Industry News & <span>Logistics Tips</span></h2>
+        <p class="section-desc">Stay updated with supply chain trends, packaging guidelines, and green freight news.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <span class="badge badge-info" style="margin-bottom: 0.75rem;">Tech Trends</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem;">How AI-Driven Route Optimization Cuts Delivery Times by 40%</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Machine learning algorithms calculating real-time traffic and weather conditions for same-day delivery.</p>
+          <a href="404.html" style="color: var(--accent); font-weight: 700; font-size: 0.85rem;">Read Full Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="glass-card">
+          <span class="badge badge-success" style="margin-bottom: 0.75rem;">Sustainability</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem;">The Zero-Emission Fleet Transformation: Delivering Green</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Transitioning 100% of urban delivery vans to electric and drone technology by the end of this decade.</p>
+          <a href="404.html" style="color: #34d399; font-weight: 700; font-size: 0.85rem;">Read Full Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="glass-card">
+          <span class="badge badge-warning" style="margin-bottom: 0.75rem;">Freight Advice</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem;">Cold-Chain Best Practices for High-Value Pharmaceuticals</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Real-time temperature telemetry and automated alert triggers that safeguard sensitive medical shipments.</p>
+          <a href="404.html" style="color: var(--primary); font-weight: 700; font-size: 0.85rem;">Read Full Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: CTA & NEWSLETTER SUBSCRIPTION -->
+    <section class="section-wrapper">
+      <div class="glass-panel text-center" style="padding: 4rem 2rem; background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%); border: 1px solid var(--border-glow);">
+        <h2 class="section-title" style="font-size: 2.8rem;">Ready to Send Your First <span>Package?</span></h2>
+        <p class="section-desc" style="max-width: 600px; margin: 0 auto 2rem;">Sign up in less than 60 seconds to access live tracking dashboards, automated shipping rate discounts, and instant doorstep pickup.</p>
+        
+        <form class="newsletter-form" style="max-width: 500px; margin: 0 auto; display: flex; gap: 0.75rem;">
+          <input type="email" class="form-input" placeholder="Enter your business email..." required style="background: rgba(0,0,0,0.6);">
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Started</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo-brand">
+          <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+        </a>
+        <p class="footer-brand-desc">Next-generation global delivery, same-day courier, and air cargo logistics platform powered by AI tracking.</p>
+        <div class="social-icons">
+          <a href="404.html" class="social-icon" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+          <a href="404.html" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services & Rates</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blog.html">Blog Insights</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Portals & Validation</h4>
+        <ul class="footer-links">
+          <li><a href="404.html">tracker</a></li>
+          <li><a href="404.html">Client Parcel </a></li>
+          <li><a href="404.html">Admin Fleet Control Tower</a></li>
+          <li><a href="404.html"> Page Demo</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Contact HQ</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> 100 Logistics Way, New York, NY</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-phone" style="color: var(--accent);"></i> +1 (800) 555-SWIFT</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-envelope" style="color: #34d399;"></i> support@swiftcourier.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SwiftCourier Inc. All rights reserved.</p>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">System Status: <span style="color: #34d399;">● 100% Operational</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

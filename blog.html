@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Logistics Insights | SwiftCourier Platform</title>
+  <meta name="description" content="Stay ahead with supply chain analysis, cold-chain freight tips, e-commerce fulfillment guides, and sustainability news from SwiftCourier experts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="navbar">
+      <a href="index.html" class="logo-brand">
+        <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="fas fa-user-lock"></i> Account Login</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div>
+      <div class="logo-brand" style="margin-bottom: 2rem;">
+        <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+      </div>
+      <ul style="display: flex; flex-direction: column; gap: 1rem;">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-user-lock"></i> Account Login</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: BLOG HERO & SEARCH BAR -->
+    <section class="page-hero">
+      <div class="section-wrapper" style="padding-top: 0; padding-bottom: 0;">
+        <span class="section-tag"><i class="fas fa-newspaper"></i> Logistics Knowledge Base</span>
+        <h1 class="section-title">Industry Insights & <span>Delivery Trends</span></h1>
+        <p class="section-desc" style="margin: 0 auto 1.5rem;">
+          Expert articles on global supply chains, e-commerce packaging, autonomous drones, and green freight.
+        </p>
+        
+        <div style="max-width: 500px; margin: 0 auto;">
+          <input type="text" class="form-input" placeholder="Search logistics articles..." style="background: rgba(0,0,0,0.5);">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FEATURED STORY BANNER -->
+    <section class="section-wrapper">
+      <div class="glass-panel" style="padding: 3rem; background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <span class="badge badge-warning" style="margin-bottom: 1rem;">Featured Article</span>
+            <h2 class="section-title" style="font-size: 2rem;">How AI-Driven Route Optimization Cuts Delivery Times by 40%</h2>
+            <p class="section-desc" style="margin-bottom: 1.5rem;">Discover how real-time telematics and predictive weather algorithms are transforming last-mile urban logistics across major metropolitan areas.</p>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #090d16; font-weight: 700; display: flex; align-items: center; justify-content: center;">AV</div>
+              <div>
+                <h4 style="color: #fff; font-size: 0.9rem;">Dr. Aris Vance</h4>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">Sep 14, 2026 • 5 min read</p>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card text-center" style="padding: 2rem; border-color: var(--primary);">
+            <img src="assets/blog_featured.webp" alt="AI Route Optimization Logistics Tech Report" style="width: 100%; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+            <h4 style="color: #fff; font-size: 1.2rem;">AI Dispatch Benchmark Report</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Download the full 2026 whitepaper on last-mile robotics.</p>
+            <a href="404.html" class="btn btn-primary btn-sm"><i class="fas fa-file-pdf"></i> Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LATEST ARTICLES GRID -->
+    <section class="section-wrapper">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-book-open"></i> Recent Articles</span>
+        <h2 class="section-title">Latest <span>Logistics Posts</span></h2>
+        <p class="section-desc">Browse through our latest publications categorized by domain.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <img src="assets/blog_green.webp" alt="Zero-Emission Fleet Transformation" style="width: 100%; border-radius: 8px; margin-bottom: 0.75rem; border: 1px solid var(--border-glass);">
+          <span class="badge badge-success" style="margin-bottom: 0.75rem;">Sustainability</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem;">The Zero-Emission Fleet Transformation: Delivering Green in 2026</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Transitioning 100% of urban delivery vans to electric and drone technology by the end of this decade.</p>
+          <p style="font-size: 0.75rem; color: var(--text-dim);">By Samantha Thorne • Sep 10, 2026</p>
+        </div>
+
+        <div class="glass-card">
+          <img src="assets/blog_pharma.webp" alt="Cold-Chain Logistics Best Practices" style="width: 100%; border-radius: 8px; margin-bottom: 0.75rem; border: 1px solid var(--border-glass);">
+          <span class="badge badge-warning" style="margin-bottom: 0.75rem;">Specialized Freight</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem;">Cold-Chain Logistics Best Practices for High-Value Pharmaceuticals</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Real-time temperature telemetry and automated alert triggers that safeguard life-saving vaccines.</p>
+          <p style="font-size: 0.75rem; color: var(--text-dim);">By Marcus Brody • Sep 04, 2026</p>
+        </div>
+
+        <div class="glass-card">
+          <span class="badge badge-info" style="margin-bottom: 0.75rem;">E-Commerce</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem;">5 Strategies to Reduce Cart Abandonment With Fast Delivery</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">How offering 2-hour express delivery options converted 28% more shoppers at checkout.</p>
+          <p style="font-size: 0.75rem; color: var(--text-dim);">By Emily Martinez • Aug 28, 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: INDUSTRY TRENDS & INFOGRAPHICS -->
+    <section class="section-wrapper" style="background: rgba(255,255,255,0.01);">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-chart-line"></i> Market Data</span>
+        <h2 class="section-title">2026 Global <span>Logistics Benchmarks</span></h2>
+        <p class="section-desc">Key metrics defining the modern parcel delivery industry.</p>
+      </div>
+
+      <div class="grid-4 text-center">
+        <div class="glass-card">
+          <h2 style="font-size: 2.2rem; color: var(--primary);">68%</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Consumers expect Same-Day delivery options at checkout.</p>
+        </div>
+        <div class="glass-card">
+          <h2 style="font-size: 2.2rem; color: var(--accent);">40%</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Fuel cost reduction achieved by electric fleet vehicles.</p>
+        </div>
+        <div class="glass-card">
+          <h2 style="font-size: 2.2rem; color: #34d399;">99.9%</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Barcode scanning accuracy with automated sorting robotics.</p>
+        </div>
+        <div class="glass-card">
+          <h2 style="font-size: 2.2rem; color: #818cf8;">3.2 Hrs</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Average urban doorstep delivery turnaround time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: GUEST AUTHOR SPOTLIGHT -->
+    <section class="section-wrapper">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-user-edit"></i> Expert Columnists</span>
+        <h2 class="section-title">Logistics <span>Thought Leaders</span></h2>
+        <p class="section-desc">Meet the industry analysts contributing weekly commentary.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card text-center">
+          <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.4rem; margin: 0 auto 1rem;">
+            AV
+          </div>
+          <h4 style="color: #fff; font-size: 1.1rem;">Dr. Aris Vance</h4>
+          <p style="color: var(--text-muted); font-size: 0.8rem;">Lead AI Logistics Architect</p>
+        </div>
+
+        <div class="glass-card text-center">
+          <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--accent-light); color: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.4rem; margin: 0 auto 1rem;">
+            ST
+          </div>
+          <h4 style="color: #fff; font-size: 1.1rem;">Samantha Thorne</h4>
+          <p style="color: var(--text-muted); font-size: 0.8rem;">Green Transport Specialist</p>
+        </div>
+
+        <div class="glass-card text-center">
+          <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(99, 102, 241, 0.15); color: #818cf8; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.4rem; margin: 0 auto 1rem;">
+            MB
+          </div>
+          <h4 style="color: #fff; font-size: 1.1rem;">Marcus Brody</h4>
+          <p style="color: var(--text-muted); font-size: 0.8rem;">Autonomous Fleet Engineer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: POPULAR TOPIC TAG CLOUD -->
+    <section class="section-wrapper">
+      <div class="glass-panel text-center" style="padding: 2.5rem;">
+        <span class="section-tag"><i class="fas fa-tags"></i> Topics Index</span>
+        <h2 class="section-title">Popular <span>Logistics Topics</span></h2>
+        
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+          <span class="badge badge-warning" style="font-size: 0.9rem; padding: 0.5rem 1rem;">#SameDayDelivery (42)</span>
+          <span class="badge badge-info" style="font-size: 0.9rem; padding: 0.5rem 1rem;">#ElectricFleet (28)</span>
+          <span class="badge badge-success" style="font-size: 0.9rem; padding: 0.5rem 1rem;">#AirFreight (35)</span>
+          <span class="badge badge-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">#ECommerceLogistics (50)</span>
+          <span class="badge badge-warning" style="font-size: 0.9rem; padding: 0.5rem 1rem;">#ColdChain (19)</span>
+          <span class="badge badge-info" style="font-size: 0.9rem; padding: 0.5rem 1rem;">#AutonomousDrones (15)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: WEBINARS & VIDEO BRIEFINGS -->
+    <section class="section-wrapper">
+      <div class="text-center">
+        <span class="section-tag"><i class="fas fa-video"></i> Video Briefings</span>
+        <h2 class="section-title">On-Demand <span>Logistics Webinars</span></h2>
+        <p class="section-desc">Watch keynotes and virtual tech demonstrations from our engineering team.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass-card" style="padding: 2rem;">
+          <div style="width: 100%; height: 180px; background: #090d16; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+            <i class="fas fa-play-circle" style="font-size: 3.5rem; color: var(--primary); cursor: pointer;" onclick="window.location.href='404.html'"></i>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem;">Building Next-Gen Drone Delivery Air Corridors</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">45 min video recording • Keynote speaker: Marcus Brody</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2rem;">
+          <div style="width: 100%; height: 180px; background: #090d16; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+            <i class="fas fa-play-circle" style="font-size: 3.5rem; color: var(--accent); cursor: pointer;" onclick="window.location.href='404.html'"></i>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem;">Scaling E-Commerce Shipping With APIs</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">30 min video tutorial • Keynote speaker: Alex Chen</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: NEWSLETTER DIGEST BOX -->
+    <section class="section-wrapper">
+      <div class="glass-panel text-center" style="padding: 3.5rem 2rem; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);">
+        <h2 class="section-title">Subscribe to the <span>Weekly Digest</span></h2>
+        <p class="section-desc" style="max-width: 550px; margin: 0 auto 1.5rem;">Receive curated supply chain news, courier rate updates, and shipping tips directly in your inbox.</p>
+        
+        <form class="newsletter-form" style="max-width: 500px; margin: 0 auto; display: flex; gap: 0.75rem;">
+          <input type="email" class="form-input" placeholder="Enter your email address..." required style="background: rgba(0,0,0,0.6);">
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo-brand">
+          <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+        </a>
+        <p class="footer-brand-desc">Next-generation global delivery, same-day courier, and air cargo logistics platform powered by AI tracking.</p>
+        <div class="social-icons">
+          <a href="404.html" class="social-icon" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+          <a href="404.html" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services & Rates</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blog.html">Blog Insights</a></li>
+        </ul>
+      </div>
+<div>
+        <h4 class="footer-title">Portals & Validation</h4>
+        <ul class="footer-links">
+          <li><a href="404.html">tracker</a></li>
+          <li><a href="404.html">Client Parcel </a></li>
+          <li><a href="404.html">Admin Fleet Control Tower</a></li>
+          <li><a href="404.html"> Page Demo</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Contact HQ</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> 100 Logistics Way, New York, NY</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-phone" style="color: var(--accent);"></i> +1 (800) 555-SWIFT</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-envelope" style="color: #34d399;"></i> support@swiftcourier.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SwiftCourier Inc. All rights reserved.</p>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">System Status: <span style="color: #34d399;">● 100% Operational</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

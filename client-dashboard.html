@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Parcel Portal | SwiftCourier</title>
+  <meta name="description" content="Manage your active shipments, track incoming parcels, book doorstep pickups, and view billing receipts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Client Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div>
+        <div class="sidebar-header">
+          <a href="client-dashboard.html" class="logo-brand">
+            <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+          </a>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="404.html" class="menu-item active"><i class="fas fa-box-open"></i> My Deliveries</a>
+          <a href="404.html" class="menu-item" onclick="openBookModal()"><i class="fas fa-plus-circle"></i> Book New Package</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-address-book"></i> Saved Addresses</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-file-invoice-dollar"></i> Billing & Invoices</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-headset"></i> Support Helpdesk</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-globe"></i> Main Website</a>
+        </nav>
+      </div>
+
+      <div>
+        <div class="sidebar-user">
+          <div class="user-avatar" id="clientAvatarDisplay">JD</div>
+          <div class="user-info">
+            <h4 id="clientUserNameDisplay">John Doe</h4>
+            <p id="clientUserEmailDisplay" style="color: var(--primary); font-size: 0.78rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px;">
+              <i class="fas fa-envelope" style="margin-right: 4px;"></i> <span id="clientEmailText">user@swiftcourier.com</span>
+            </p>
+          </div>
+        </div>
+        <a href="login.html" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 1rem; color: var(--danger); border-color: rgba(239, 68, 68, 0.3);">
+          <i class="fas fa-sign-out-alt"></i> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Client Main Body -->
+    <main class="dashboard-main">
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div>
+          <h3 style="font-size: 1.2rem; color: #fff;">Welcome Back, <span style="color: var(--primary);" id="clientWelcomeName">Valued Client!</span></h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Account Session: <strong style="color: #fff;" id="clientTopEmail">user@swiftcourier.com</strong></p>
+        </div>
+
+        <div class="topbar-actions" style="display: flex; align-items: center; gap: 1rem;">
+          <div class="user-email-pill" style="display: flex; align-items: center; gap: 0.5rem; background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.3); padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.82rem; color: #fff;">
+            <i class="fas fa-user-circle" style="color: var(--primary);"></i> <span id="clientPillEmail">user@swiftcourier.com</span>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="openBookModal()"><i class="fas fa-box"></i> Book Shipment</button>
+          <div class="topbar-icon-btn">
+            <i class="fas fa-bell"></i>
+            <div class="notification-dot"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="dashboard-content">
+        
+        <!-- Active Package Tracker Timeline Card -->
+        <div class="glass-card" style="padding: 2rem; border-color: var(--primary);">
+          <img src="assets/client_portal.webp" alt="Customer Parcel Tracking Portal" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 1.25rem; border: 1px solid var(--border-glass);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="badge badge-warning">Active Delivery in Transit</span>
+              <h2 style="font-size: 1.6rem; color: #fff; margin-top: 0.5rem;">Tracking Code: <span id="clientActivePkgId">TRK-8849-NY</span></h2>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">From: TechCorp HQ (NY) ➔ To: 104 5th Ave, Manhattan, NY</p>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-size: 0.85rem; color: var(--text-dim);">Estimated Arrival:</span>
+              <h3 style="font-size: 1.4rem; color: var(--accent);" id="clientActivePkgEst">Today, 4:30 PM</h3>
+            </div>
+          </div>
+
+          <!-- Step Timeline -->
+          <div class="tracking-timeline">
+            <div class="timeline-progress-bar" id="clientTimelineProgressBar" style="width: 60%;"></div>
+            <div id="clientTimelineSteps" style="display: flex; justify-content: space-between; width: 100%;">
+              <!-- Rendered via client-dashboard.js -->
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-glass);">
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <i class="fas fa-user-circle" style="color: var(--accent); font-size: 1.2rem;"></i>
+              <span style="font-size: 0.9rem; color: var(--text-muted);">Assigned Driver: <strong>Mark (Van #12)</strong></span>
+            </div>
+            <a href="404.html" class="btn btn-outline btn-sm"><i class="fas fa-comment"></i> Message Courier</a>
+          </div>
+        </div>
+
+        <!-- Quick Stats & Actions -->
+        <div class="grid-3">
+          <div class="kpi-card">
+            <div>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">Wallet Balance</span>
+              <div class="kpi-val">$148.50</div>
+              <p style="font-size: 0.8rem; color: var(--primary); margin-top: 0.25rem;">+ $20 Bonus Rewards</p>
+            </div>
+            <div class="kpi-icon kpi-amber"><i class="fas fa-wallet"></i></div>
+          </div>
+
+          <div class="kpi-card">
+            <div>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">Total Delivered</span>
+              <div class="kpi-val">24 Parcels</div>
+              <p style="font-size: 0.8rem; color: var(--success); margin-top: 0.25rem;">100% On-Time Record</p>
+            </div>
+            <div class="kpi-icon kpi-emerald"><i class="fas fa-check-circle"></i></div>
+          </div>
+
+          <div class="kpi-card" style="cursor: pointer;" onclick="openBookModal()">
+            <div>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">Quick Booking</span>
+              <div class="kpi-val" style="font-size: 1.3rem; color: var(--accent);">+ Book Pickup</div>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Courier at door in 30 mins</p>
+            </div>
+            <div class="kpi-icon kpi-cyan"><i class="fas fa-shipping-fast"></i></div>
+          </div>
+        </div>
+
+        <!-- Recent Packages Table -->
+        <div class="table-container">
+          <div class="table-header">
+            <h3 style="font-size: 1.1rem; color: #fff;"><i class="fas fa-history" style="color: var(--primary);"></i> Shipment History & Receipts</h3>
+            <button class="btn btn-outline btn-sm" onclick="openBookModal()"><i class="fas fa-plus"></i> New Package</button>
+          </div>
+
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Tracking ID</th>
+                <th>Recipient / Destination</th>
+                <th>Service Type</th>
+                <th>Status</th>
+                <th>Date / Est. Delivery</th>
+                <th>Receipt Invoice</th>
+              </tr>
+            </thead>
+            <tbody id="clientShipmentsTbody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Book New Shipment Modal -->
+  <div class="modal-backdrop" id="bookModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 style="color: #fff;"><i class="fas fa-box" style="color: var(--primary);"></i> Book New Courier Delivery</h3>
+        <button class="modal-close" onclick="closeBookModal()"><i class="fas fa-times"></i></button>
+      </div>
+
+      <form id="clientBookForm">
+        <div class="form-group">
+          <label class="form-label">Recipient Name</label>
+          <input type="text" id="bookRecipient" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Delivery Address</label>
+          <input type="text" id="bookAddress" class="form-input" placeholder="e.g. 742 Evergreen Terrace, LA" required>
+        </div>
+
+        <div class="grid-2" style="gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label">Service Plan</label>
+            <select id="bookType" class="form-select">
+              <option value="Same-Day Express Courier">Same-Day Express Courier</option>
+              <option value="International Priority Air">International Priority Air</option>
+              <option value="Standard Ground Freight">Standard Ground Freight</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Estimated Weight</label>
+            <input type="text" class="form-input" placeholder="e.g. 2.0 kg" required>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-outline btn-sm" onclick="closeBookModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-check"></i> Book & Pay ($28.50)</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Receipt Invoice Modal -->
+  <div class="modal-backdrop" id="receiptModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 style="color: #fff;">Invoice Details</h3>
+        <button class="modal-close" onclick="closeReceiptModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="receiptModalContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/client-dashboard.js"></script>
+</body>
+</html>

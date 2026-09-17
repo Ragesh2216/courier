@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | SwiftCourier</title>
+  <meta name="description" content="The page or route you are looking for does not exist. Return to SwiftCourier home page.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1rem; background: var(--bg-dark);">
+
+  <main style="width: 100%; max-width: 700px; display: flex; align-items: center; justify-content: center;">
+    <div class="glass-panel text-center" style="width: 100%; padding: 3rem 1.5rem; border: 1px solid rgba(239, 68, 68, 0.4); box-shadow: 0 0 30px rgba(239, 68, 68, 0.15); border-radius: 20px;">
+      
+      <div style="margin-bottom: 1.5rem;">
+        <a href="index.html">
+          <img src="logo_0950.webp" alt="SwiftCourier Logo" style="height: 48px; width: auto; object-fit: contain;">
+        </a>
+      </div>
+
+      <span class="badge badge-warning" style="background: rgba(239, 68, 68, 0.2); color: #ef4444; border-color: rgba(239, 68, 68, 0.4); font-size: 0.9rem; padding: 0.5rem 1rem;">
+        <i class="fas fa-exclamation-triangle"></i> Error #404
+      </span>
+
+      <div style="margin: 1.5rem 0;">
+        <img src="assets/page_404.webp" alt="404 Page Lost in Transit" style="width: 100%; max-width: 480px; height: auto; border-radius: 12px; border: 1px solid var(--border-glass);">
+      </div>
+
+      <h1 class="section-title" style="font-size: 2rem; color: #fff; margin-bottom: 1rem;">
+        Page <span>Lost in Transit!</span>
+      </h1>
+
+      <p class="section-desc" style="max-width: 520px; margin: 0 auto 2rem; font-size: 1rem; color: var(--text-muted);">
+        The destination URL or page you requested does not exist or has been moved to a new route.
+      </p>
+
+      <!-- Action Navigation Buttons (Only Home and Back) -->
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <button onclick="window.history.back()" class="btn btn-outline btn-md" style="min-width: 140px;">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <a href="index.html" class="btn btn-primary btn-md" style="min-width: 140px;">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+</body>
+</html>

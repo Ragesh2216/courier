@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Operations Control Tower | SwiftCourier</title>
+  <meta name="description" content="SwiftCourier Admin Dashboard - Manage active fleet drivers, real-time dispatches, shipment tracking, and revenue analytics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div>
+        <div class="sidebar-header">
+          <a href="admin-dashboard.html" class="logo-brand">
+            <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+          </a>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="404.html" class="menu-item active"><i class="fas fa-chart-line"></i> Dashboard HQ</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-boxes"></i> Active Shipments</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-truck-moving"></i> Fleet Management</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-users-cog"></i> Drivers & Agents</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-chart-pie"></i> Revenue Analytics</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-ticket-alt"></i> Support Tickets</a>
+          <a href="404.html" class="menu-item"><i class="fas fa-globe"></i> Main Website</a>
+        </nav>
+      </div>
+
+      <div>
+        <div class="sidebar-user">
+          <div class="user-avatar" style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);" id="adminAvatarDisplay">AV</div>
+          <div class="user-info">
+            <h4 id="adminUserNameDisplay">Alex Vance</h4>
+            <p id="adminUserEmailDisplay" style="color: var(--primary); font-size: 0.78rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px;">
+              <i class="fas fa-envelope" style="margin-right: 4px;"></i> <span id="adminEmailText">admin@swiftcourier.com</span>
+            </p>
+          </div>
+        </div>
+        <a href="login.html" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 1rem; color: var(--danger); border-color: rgba(239, 68, 68, 0.3);">
+          <i class="fas fa-sign-out-alt"></i> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <main class="dashboard-main">
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-search">
+          <i class="fas fa-search"></i>
+          <input type="text" id="adminSearchInput" placeholder="Search tracking ID, recipient, or driver...">
+        </div>
+
+        <div class="topbar-actions" style="display: flex; align-items: center; gap: 1rem;">
+          <div class="user-email-pill" style="display: flex; align-items: center; gap: 0.5rem; background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.82rem; color: #fff;">
+            <i class="fas fa-user-shield" style="color: var(--accent);"></i> <span id="adminPillEmail">admin@swiftcourier.com</span>
+          </div>
+          <span class="badge badge-success"><i class="fas fa-signal"></i> Network: 100% Operational</span>
+          <div class="topbar-icon-btn">
+            <i class="fas fa-bell"></i>
+            <div class="notification-dot"></div>
+          </div>
+          <div class="topbar-icon-btn">
+            <i class="fas fa-cog"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="dashboard-content">
+        
+        <!-- KPI Row -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">Total Monthly Revenue</span>
+              <div class="kpi-val">$482,900</div>
+              <div class="kpi-change up"><i class="fas fa-arrow-up"></i> +14.2% vs last month</div>
+            </div>
+            <div class="kpi-icon kpi-amber"><i class="fas fa-dollar-sign"></i></div>
+          </div>
+
+          <div class="kpi-card">
+            <div>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">Active Shipments</span>
+              <div class="kpi-val">1,284</div>
+              <div class="kpi-change up"><i class="fas fa-arrow-up"></i> +8.5% today</div>
+            </div>
+            <div class="kpi-icon kpi-cyan"><i class="fas fa-box-open"></i></div>
+          </div>
+
+          <div class="kpi-card">
+            <div>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">Fleet Utilization</span>
+              <div class="kpi-val">94.8%</div>
+              <div class="kpi-change up"><i class="fas fa-arrow-up"></i> 418 Drivers On Duty</div>
+            </div>
+            <div class="kpi-icon kpi-emerald"><i class="fas fa-truck"></i></div>
+          </div>
+
+          <div class="kpi-card">
+            <div>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">On-Time Delivery</span>
+              <div class="kpi-val">99.2%</div>
+              <div class="kpi-change up"><i class="fas fa-check-double"></i> Target Exceeded</div>
+            </div>
+            <div class="kpi-icon kpi-indigo"><i class="fas fa-clock"></i></div>
+          </div>
+        </div>
+
+        <!-- Main Workspace Grid (Table + Drivers) -->
+        <div class="grid-3" style="grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+          
+          <!-- Shipments Table -->
+          <div class="table-container">
+            <div class="table-header">
+              <h3 style="font-size: 1.1rem; color: #fff;"><i class="fas fa-list" style="color: var(--primary);"></i> Live Dispatch & Shipment Status</h3>
+              <span class="badge badge-info">Real-Time Sync</span>
+            </div>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Tracking ID</th>
+                  <th>Sender</th>
+                  <th>Recipient</th>
+                  <th>Service Type</th>
+                  <th>Status</th>
+                  <th>Est. Delivery</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminShipmentsTbody">
+                <!-- Dynamically rendered via admin-dashboard.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Active Drivers Panel -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <img src="assets/admin_analytics.webp" alt="Admin Operations Control Tower" style="width: 100%; border-radius: 10px; margin-bottom: 1rem; border: 1px solid var(--border-glass);">
+            <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 1rem;"><i class="fas fa-user-ninja" style="color: var(--accent);"></i> Active Courier Drivers</h3>
+            <div id="adminDriversList">
+              <!-- Dynamically rendered -->
+            </div>
+            <a href="404.html" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 0.5rem; text-align: center; display: inline-block;">
+              <i class="fas fa-map-marked-alt"></i> View GPS Map
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Chart Row -->
+        <div class="glass-card" style="padding: 2rem;">
+          <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 1.5rem;"><i class="fas fa-chart-area" style="color: var(--primary);"></i> Delivery Performance & Volume Trends</h3>
+          <canvas id="adminRevenueChart" height="90"></canvas>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Admin Manage Status Modal -->
+  <div class="modal-backdrop" id="adminModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 style="color: #fff;" id="modalTitle">Manage Shipment</h3>
+        <button class="modal-close" onclick="closeAdminModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="adminModalContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

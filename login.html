@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Role Portal | SwiftCourier</title>
+  <meta name="description" content="Sign in or register for SwiftCourier. Select your role as Client or Admin to access your personalized parcel tracking portal or fleet control tower.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="background: radial-gradient(circle at top right, rgba(6, 182, 212, 0.2) 0%, transparent 60%), radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.2) 0%, transparent 60%), #090d16; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem 1rem;">
+
+  <div style="margin-bottom: 2rem; text-align: center;">
+    <a href="index.html" class="logo-brand" style="justify-content: center;">
+      <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+    </a>
+    <p style="color: var(--text-muted); margin-top: 0.5rem;">Access Customer Portal or Fleet Operations Control Tower</p>
+  </div>
+
+  <div class="glass-card" style="width: 100%; max-width: 480px; padding: 2.5rem; border: 1px solid var(--border-glow); box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+    <img src="assets/hero_delivery.webp" alt="SwiftCourier Portal Access" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid var(--border-glass);">
+    
+    <!-- Tab Switcher -->
+    <div style="display: flex; background: rgba(0,0,0,0.4); border-radius: 8px; padding: 0.35rem; margin-bottom: 2rem;">
+      <button class="auth-tab active" data-tab="login" style="flex: 1; padding: 0.65rem; background: var(--primary); color: #090d16; font-weight: 700; border-radius: 6px; cursor: pointer; border: none; transition: var(--transition);">Sign In</button>
+      <button class="auth-tab" data-tab="register" style="flex: 1; padding: 0.65rem; background: transparent; color: var(--text-muted); font-weight: 700; border-radius: 6px; cursor: pointer; border: none; transition: var(--transition);">Register</button>
+    </div>
+
+    <!-- Quick Demo Direct Switchers -->
+    <div style="background: rgba(245, 158, 11, 0.1); border: 1px dashed var(--primary); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center;">
+      <p style="font-size: 0.85rem; color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">⚡ Instant Demo & Validation Tests:</p>
+      <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+        <button id="demoClientBtn" class="btn btn-primary btn-sm"><i class="fas fa-user"></i> Demo Client</button>
+        <button id="demoAdminBtn" class="btn btn-accent btn-sm"><i class="fas fa-user-shield"></i> Demo Admin</button>
+        <a href="404.html" class="btn btn-outline btn-sm" style="color: var(--danger); border-color: rgba(239, 68, 68, 0.4);"><i class="fas fa-exclamation-triangle"></i> 404 Validation Test</a>
+      </div>
+    </div>
+
+    <!-- Auth Form -->
+    <form id="authForm">
+      
+      <!-- Role Selection -->
+      <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label class="form-label" style="color: #fff; font-weight: 700; margin-bottom: 0.5rem;">Select Role / Portal Destination:</label>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          
+          <label style="display: flex; align-items: center; gap: 0.5rem; padding: 0.85rem; background: rgba(0,0,0,0.4); border: 1px solid var(--border-glass); border-radius: 8px; cursor: pointer;">
+            <input type="radio" name="userRole" value="client" checked style="accent-color: var(--primary);">
+            <div>
+              <strong style="color: #fff; font-size: 0.9rem; display: block;">Customer / Client</strong>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Track & Book Parcels</span>
+            </div>
+          </label>
+
+          <label style="display: flex; align-items: center; gap: 0.5rem; padding: 0.85rem; background: rgba(0,0,0,0.4); border: 1px solid var(--border-glass); border-radius: 8px; cursor: pointer;">
+            <input type="radio" name="userRole" value="admin" style="accent-color: var(--accent);">
+            <div>
+              <strong style="color: #fff; font-size: 0.9rem; display: block;">Admin / Operations</strong>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Dispatch & Analytics</span>
+            </div>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Full Name (Hidden by default for login, visible for Register) -->
+      <div class="form-group" id="fullNameGroup" style="display: none;">
+        <label class="form-label">Full Name</label>
+        <input type="text" id="authName" class="form-input" placeholder="e.g. John Doe">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" id="authEmail" class="form-input" placeholder="user@swiftcourier.com" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input" placeholder="••••••••" required>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.85rem;">
+        <label style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); cursor: pointer;">
+          <input type="checkbox" checked style="accent-color: var(--primary);"> Remember me
+        </label>
+        <a href="#" style="color: var(--primary);">Forgot Password?</a>
+      </div>
+
+      <button type="submit" id="authSubmitBtn" class="btn btn-primary btn-lg" style="width: 100%;">
+        Sign In to Account
+      </button>
+
+    </form>
+
+    <div style="margin-top: 1.5rem; text-align: center;">
+      <a href="index.html" style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-arrow-left"></i> Back to Main Website</a>
+    </div>
+
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="width: 100%; margin-top: 4rem;">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo-brand">
+          <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
+        </a>
+        <p class="footer-brand-desc">Next-generation global delivery, same-day courier, and air cargo logistics platform powered by AI tracking.</p>
+        <div class="social-icons">
+          <a href="404.html" class="social-icon" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+          <a href="404.html" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services & Rates</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blog.html">Blog Insights</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Portals & Validation</h4>
+        <ul class="footer-links">
+          <li><a href="login.html">Sign In / Register</a></li>
+          <li><a href="client-dashboard.html">Client Parcel Dashboard</a></li>
+          <li><a href="admin-dashboard.html">Admin Fleet Control Tower</a></li>
+          <li><a href="404.html">404 Error Page Demo</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Contact HQ</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> 100 Logistics Way, New York, NY</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-phone" style="color: var(--accent);"></i> +1 (800) 555-SWIFT</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-envelope" style="color: #34d399;"></i> support@swiftcourier.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SwiftCourier Inc. All rights reserved.</p>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">System Status: <span style="color: #34d399;">● 100% Operational</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
