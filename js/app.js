@@ -8,23 +8,46 @@ document.addEventListener("DOMContentLoaded", () => {
   initNumberCounters();
 });
 
-/* Mobile Drawer Logic */
+/* Mobile Full-Screen Drawer Navigation Logic */
 function initMobileNav() {
-  const toggleBtn = document.querySelector(".mobile-toggle");
+  const toggleBtns = document.querySelectorAll(".mobile-toggle");
   const drawer = document.querySelector(".mobile-nav-drawer");
   const overlay = document.querySelector(".drawer-overlay");
+  const closeBtn = document.querySelector(".drawer-close-btn");
 
-  if (toggleBtn && drawer && overlay) {
-    toggleBtn.addEventListener("click", () => {
-      drawer.classList.add("open");
-      overlay.classList.add("active");
-    });
+  if (!drawer) return;
 
-    overlay.addEventListener("click", () => {
-      drawer.classList.remove("open");
-      overlay.classList.remove("active");
+  const openDrawer = () => {
+    drawer.classList.add("open");
+    if (overlay) overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeDrawer = () => {
+    drawer.classList.remove("open");
+    if (overlay) overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openDrawer();
     });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeDrawer);
   }
+
+  if (overlay) {
+    overlay.addEventListener("click", closeDrawer);
+  }
+
+  const drawerLinks = drawer.querySelectorAll("a");
+  drawerLinks.forEach(link => {
+    link.addEventListener("click", closeDrawer);
+  });
 }
 
 /* Home Tracking Search Widget */
