@@ -13,7 +13,7 @@ function initMobileNav() {
   const toggleBtns = document.querySelectorAll(".mobile-toggle");
   const drawer = document.querySelector(".mobile-nav-drawer");
   const overlay = document.querySelector(".drawer-overlay");
-  const closeBtn = document.querySelector(".drawer-close-btn");
+  const closeBtns = document.querySelectorAll(".drawer-close-btn");
 
   if (!drawer) return;
 
@@ -36,9 +36,9 @@ function initMobileNav() {
     });
   });
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeDrawer);
-  }
+  closeBtns.forEach(btn => {
+    btn.addEventListener("click", closeDrawer);
+  });
 
   if (overlay) {
     overlay.addEventListener("click", closeDrawer);

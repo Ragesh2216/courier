@@ -176,6 +176,7 @@
   cursor: pointer;
   position: relative;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .topbar-icon-btn:hover {

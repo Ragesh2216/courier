@@ -215,12 +215,13 @@ button, input, select, textarea {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   max-width: 100vw;
   background: rgba(9, 13, 22, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 2000;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -241,7 +242,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border-glass);
 }
@@ -265,6 +266,14 @@ button, input, select, textarea {
   background: var(--primary);
   color: #090d16;
   border-color: var(--primary);
+}
+
+.drawer-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1.5rem;
 }
 
 .drawer-menu-links {
@@ -292,6 +301,23 @@ button, input, select, textarea {
   color: var(--primary);
   border-color: var(--primary);
   transform: translateX(4px);
+}
+
+.drawer-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-glass);
+  flex-shrink: 0;
+}
+
+.drawer-footer .btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  font-size: 1rem;
 }
 
 .drawer-overlay {
