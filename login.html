@@ -39,6 +39,11 @@
         </div>
       </div>
 
+      <!-- Auth Alert Banner (For Registration Success / Notifications) -->
+      <div id="authAlert" style="display: none; background: rgba(52, 211, 153, 0.15); border: 1px solid #34d399; color: #34d399; padding: 0.85rem 1rem; border-radius: 8px; margin-bottom: 1.25rem; font-size: 0.9rem; text-align: center; align-items: center; justify-content: center; gap: 0.5rem;">
+        <i class="fas fa-check-circle"></i> <span id="authAlertMsg">Registration successful! Please sign in with your credentials.</span>
+      </div>
+
       <!-- Auth Form -->
       <form id="authForm">
         
@@ -69,7 +74,7 @@
         <!-- Full Name (Hidden by default for login, visible for Register) -->
         <div class="form-group" id="fullNameGroup" style="display: none;">
           <label class="form-label">Full Name</label>
-          <input type="text" id="authName" class="form-input" placeholder="e.g. John Doe" required >
+          <input type="text" id="authName" class="form-input" placeholder="e.g. John Doe">
         </div>
 
         <div class="form-group">
@@ -79,7 +84,7 @@
 
         <div class="form-group">
           <label class="form-label">Password</label>
-          <input type="password" class="form-input" placeholder="••••••••" required>
+          <input type="password" id="authPassword" class="form-input" placeholder="••••••••" required>
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.85rem; flex-wrap: wrap; gap: 0.5rem;">
@@ -101,61 +106,6 @@
 
     </div>
   </main>
-
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" class="logo-brand">
-          <img src="logo_0950.webp" alt="SwiftCourier Logo" class="brand-logo-img">
-        </a>
-        <p class="footer-brand-desc">Next-generation global delivery, same-day courier, and air cargo logistics platform powered by AI tracking.</p>
-        <div class="social-icons">
-          <a href="404.html" class="social-icon" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
-          <a href="404.html" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="404.html" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="404.html" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <div>
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home Page</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services & Rates</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="blog.html">Blog Insights</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="footer-title">Portals & Validation</h4>
-        <ul class="footer-links">
-          <li><a href="login.html">Sign In / Register</a></li>
-          <li><a href="client-dashboard.html">Client Parcel Dashboard</a></li>
-          <li><a href="admin-dashboard.html">Admin Fleet Control Tower</a></li>
-          <li><a href="404.html">404 Error Page Demo</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="footer-title">Contact HQ</h4>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> 100 Logistics Way, New York, NY</p>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-phone" style="color: var(--accent);"></i> +1 (800) 555-SWIFT</p>
-        <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-envelope" style="color: #34d399;"></i> support@swiftcourier.com</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 SwiftCourier Inc. All rights reserved.</p>
-      <div style="display: flex; gap: 1.5rem;">
-        <a href="404.html">Privacy Policy</a>
-        <a href="404.html">Terms of Service</a>
-        <a href="404.html">System Status: <span style="color: #34d399;">● 100% Operational</span></a>
-      </div>
-    </div>
-  </footer>
 
   <script src="js/data.js"></script>
   <script src="js/auth.js"></script>
